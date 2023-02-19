@@ -1,2 +1,6 @@
 Flask
+flask_mail
+json
+pandas
+sklearn
 Gunicorn
