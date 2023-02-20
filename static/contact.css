@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'avenirregular';
+    src: url('avenir_roman-webfont.woff2') format('woff2'),
+         url('avenir_roman-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: url(/static/page_bg.avif);
+    font-family: 'avenirregular', arial;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+.main-div {
+    padding: 30px;
+    width: 86%;
+    margin: auto;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+    overflow-y:auto;
+    scrollbar-width: thin;
+    scrollbar-color: #333 transparent;
+}
+
+button{
+    width: 180px;
+    height: 60px;
+    border: none;
+    outline: none;
+    background: #2f2f2f;
+    color: #fff;
+    font-size: 22px;
+    border-radius: 40px;
+    text-align: center;
+    box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    float: left;
+    clear: left;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    vertical: bottom;
+}
+
+
+input[name="name"] {
+  width: 100px;
+  height: 30px;
+  font-size: 18px;
+  border: none;
+}
+
+input[name="email"] {
+  width: 200px;
+  height: 30px;
+  font-size: 18px;
+  border: none;
+}
+
+textarea {
+  width: 500px;
+  height: 200px;
+  font-size: 18px;
+  border: none;
+}

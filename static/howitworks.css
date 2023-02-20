@@ -1,0 +1,162 @@
+@font-face {
+    font-family: 'avenirregular';
+    src: url('avenir_roman-webfont.woff2') format('woff2'),
+         url('avenir_roman-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: url(/static/page_bg.avif);
+    font-family: 'avenirregular', arial;
+    color: #ffffff;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 30px;
+    text-align: center;
+}
+
+p {
+    color: #ffffff;
+    font-size: 17px;
+    text-align: left;
+}
+
+ul {
+    color: #ffffff;
+    font-size: 17px;
+}
+
+.main-div {
+    position: relative;
+    padding: 30px;
+    width: 86%;
+    margin: 0 px;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+    overflow-y:auto;
+    scrollbar-width: thin;
+    scrollbar-color: #333 transparent;
+}
+
+.col-div {
+    position:absolute;
+    top: 30px;
+    left: 30px;
+    padding: 20px 0px 0px 0px;
+    text-align: left;
+    width: 200px;
+    height: 800px;
+    margin: 10px;
+}
+
+.title-div {
+    position:absolute;
+    left:0px;
+    border-radius: 10px;
+    padding: 0 px;
+    text-align: left;
+    margin: 10px;
+}
+
+.link-div {
+    height: 25px;
+    width: 200px;
+    text-align: center;
+    margin: 50px;
+    padding: 2px;
+    background-color: black;
+    text: white;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.analysis-div {
+    height: 25px;
+    width: 200px;
+    text-align: center;
+    margin: 50px;
+    border: 1px solid #f6dd6e;
+    border-radius: 5px;
+    padding: 2px;
+    background-color: black;
+    color: #f6dd6e;
+}
+
+.description-div {
+    height: 500px;
+    width: 400px;
+    position:absolute;
+    top: 0px;
+    left: 1100px;
+    text-align: center;
+    margin: 50px;
+    border: 1px solid #f6dd6e;
+    border-radius: 5px;
+    padding: 25px;
+    background-color: black;
+    color: #f6dd6e;
+}
+
+#kraken {
+    top: 0px;
+    left:200px;
+    position:absolute
+}
+
+#cer {
+    top: 50px;
+    left: 350px;
+    position:absolute
+}
+
+#cryptowisser {
+    top: 0px;
+    left: 500px;
+    position:absolute
+}
+
+#cc {
+    top: 50px;
+    left: 650px;
+    position:absolute
+}
+
+#cmc {
+    top: 0px;
+    left: 800px;
+    position:absolute
+}
+
+
+#speeds {
+    top: 200px;
+    left: 200px;
+    position:absolute
+}
+
+#security {
+    top: 250px;
+    left: 350px;
+    position:absolute
+}
+
+#energy {
+    top: 200px;
+    left: 500px;
+    position:absolute
+}
+
+#tags {
+    top: 250px;
+    left: 650px;
+    position:absolute
+}
+
+#project {
+    top: 200px;
+    left: 800px;
+    position:absolute
+}

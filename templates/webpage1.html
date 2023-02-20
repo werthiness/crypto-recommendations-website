@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+    <!-- HTML !-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='form_styles.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="#">About</a>
+    </nav>
+<!--<p> This is a webpage. </p>-->
+    <label for="title">Title</label>
+    <br>
+    <br>
+    <div class="main-div">
+        <form method="post", action="/recommendations.html">
+
+            <div class="column-div">
+                    <div class="category-div industry">
+                    <h2 class="tag-title">Industries </h2>
+                    <label class="container">Entertainment &#128250;
+                      <input type="checkbox", name="ent">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Music &#127932;
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Sports &#9917;
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Education 	&#127891;
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Healthcare &#127973;
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Insurance
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Real estate &#127969;
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Tourism &#128747;
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Energy sector &#9889;
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Marketing &#128240;
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Supply chain & logistics &#128666;
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="container">E-commerce &#128722;
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Social media
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Tokenized gold <span>🪙</span>
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Memecoins &#129313;
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                    </label>
+                </div>
+                </div>
+            <div class="column-div">
+                    <div class="category-div game">
+                    <h2 class="tag-title">Gaming-related</h2>
+                    <label class="container">Gaming-general <span> 🧠</span>
+                      <input type="checkbox">
+                      <span class="checkmark blockchain"></span>
+                    </label>
+                    <label class="container">Virtual/augmented reality (VR/AR)
+                      <input type="checkbox">
+                      <span class="checkmark blockchain"></span>
+                    </label>
+                    <label class="container">Virtual land/world
+                      <input type="checkbox">
+                      <span class="checkmark blockchain"></span>
+                    </label>
+                    <label class="container">Play-to-earn
+                      <input type="checkbox">
+                      <span class="checkmark blockchain"></span>
+                    </label>
+                    <label class="container">Gambling
+                      <input type="checkbox">
+                      <span class="checkmark blockchain"></span>
+                    </label>
+                </div>
+                    <br>
+                    <div class="category-div data">
+                    <h2 class="tag-title">Data-related</h2>
+                    <label class="container">Big data
+                      <input type="checkbox">
+                      <span class="checkmark data"></span>
+                    </label>
+                    <label class="container">Artificial intelligence
+                      <input type="checkbox">
+                      <span class="checkmark data"></span>
+                    </label>
+                    <label class="container">Data storage
+                      <input type="checkbox">
+                      <span class="checkmark data"></span>
+                    </label>
+                    <label class="container">Cybersecurity
+                      <input type="checkbox">
+                      <span class="checkmark data"></span>
+                    </label>
+                    <label class="container">Identity verification
+                      <input type="checkbox">
+                      <span class="checkmark data"></span>
+                    </label>
+                </div>
+                </div>
+    <!--            Actual blockchain-->
+            <div class="column-div">
+                    <div class="category-div blockchain">
+                    <h2 class="tag-title">Blockchain tags </h2>
+                    <label class="container">Smart contracts <span> 🧠</span>
+                      <input type="checkbox">
+                      <span class="checkmark blockchain"></span>
+                    </label>
+                    <label class="container">Centralized exchange token (CEX) &#128177;
+                      <input type="checkbox">
+                      <span class="checkmark blockchain"></span>
+                    </label>
+                    <label class="container">Decentralized exchange token (DEX) &#128184;
+                      <input type="checkbox">
+                      <span class="checkmark blockchain"></span>
+                    </label>
+                    <label class="container">Stablecoin &#128181;
+                      <input type="checkbox">
+                      <span class="checkmark blockchain"></span>
+                    </label>
+                    <label class="container">Non-fungible tokens (NFTs) <span>🖼️</span>
+                      <input type="checkbox">
+                      <span class="checkmark blockchain"></span>
+                    </label>
+                    <label class="container">Web3 &#128376;
+                      <input type="checkbox">
+                      <span class="checkmark blockchain"></span>
+                    </label>
+                    <label class="container">Decentralized autonomous organizations (DAOs)<span>🖧</span>
+                      <input type="checkbox">
+                      <span class="checkmark blockchain"></span>
+                    </label>
+                    <label class="container">Metaverse &#127756;
+                      <input type="checkbox">
+                      <span class="checkmark blockchain"></span>
+                    </label>
+                    <label class="container">Interoperability &#9939;
+                      <input type="checkbox">
+                      <span class="checkmark blockchain"></span>
+                    </label>
+                </div>
+                </div>
+            <div class="column-div">
+                    <div class="category-div property">
+                    <h2 class="tag-title">Network properties </h2>
+                    <label class="container">Security &#128274;
+                      <input type="checkbox">
+                      <span class="checkmark property"></span>
+                    </label>
+                    <label class="container">Energy-efficient &#9889;
+                      <input type="checkbox">
+                      <span class="checkmark property"></span>
+                    </label>
+                    <label class="container">Speed &#9203;
+                      <input type="checkbox">
+                      <span class="checkmark property"></span>
+                    </label>
+                    <label class="container">Privacy &#128373;
+                      <input type="checkbox">
+                      <span class="checkmark property"></span>
+                    </label>
+                    <label class="container">Governance &#128499;
+                      <input type="checkbox">
+                      <span class="checkmark property"></span>
+                    </label>
+                </div>
+                <button type="submit">Submit</button>
+                </div>
+            <br><br><br><br>
+    <!--
+            <button class="industry_tag", type="button">Smart contracts</button>
+            <button class="industry_tag", type="button">Centralized exchange token</button>
+            <button class="industry_tag", type="button">Decentralized exchange token</button>
+            <button class="industry_tag", type="button">Stablecoins</button>
+            <button class="industry_tag", type="button">Non-fungible tokens (NFTs)</button>
+            <button class="industry_tag", type="button">Web3</button>
+            <button class="industry_tag", type="button">Decentralized autonomous organization (DAO)</button>
+            <button class="industry_tag", type="button">Metaverse</button>
+            <button class="industry_tag", type="button">Interoperability</button>
+            <br><br><br><br>
+            Blockchain-related-->
+    <!--
+            <button class="industry_tag", type="button">Energy-efficient</button>
+            <button class="industry_tag", type="button">Speed &#9203;</button>
+            <button class="industry_tag", type="button">Security</button>
+            <button class="industry_tag", type="button">Privacy</button>
+            <button class="industry_tag", type="button">Governance</button>
+            <button class="industry_tag", type="button">Layer 1</button>
+            Properties-->
+        </form>
+    </div>
+</body>
+</html>

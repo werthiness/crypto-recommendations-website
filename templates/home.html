@@ -1,0 +1,281 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{{ super() }}
+<script src="{{ url_for('static', filename='slider.js') }}" defer></script>
+
+{% endblock %}
+
+{% block content %}
+<div class="main-div">
+<form method="post" action="/recommendations.html">
+    <div class="outer-div">
+        <h2 class="tag-title">Properties </h2>
+        <div class="inner-div" style="border: 0px;">
+            <label class="container">Security &#128274;
+              <input type="checkbox" name="security">
+              <span class="checkmark property"></span>
+            </label>
+            <label class="container">Energy-efficient &#9889;
+              <input type="checkbox" name="energy_efficiency">
+              <span class="checkmark property"></span>
+            </label>
+            <label class="container">Speed &#9203;
+              <input type="checkbox" name="speed">
+              <span class="checkmark property"></span>
+            </label>
+            <label class="container">Privacy &#128373;
+              <input type="checkbox" name="privacy">
+              <span class="checkmark property"></span>
+            </label>
+            <label class="container">Governance &#128499;
+              <input type="checkbox" name="governance">
+              <span class="checkmark property"></span>
+            </label>
+            <label class="container">Deflationary &#128185;
+              <input type="checkbox" name="deflationary">
+              <span class="checkmark property"></span>
+            </label>
+            <br>
+            <div class="range_container">
+                <div class="sliders_control">
+                    <img src="static/website_marketcap.png" class="market_cap">
+                    <div class="obscure_market_cap" id="left_obscure" style="left: 0px;"></div>
+                    <div class="obscure_market_cap" id="right_obscure" style="right: 15px;"></div>
+                    <br><br>
+                    <input id="fromSlider" type="range" value="1" min="1" max="7" name="min" step=1>
+                    <input id="toSlider" type="range" value="7" min="1" max="7" name="max" step=1>
+                </div>
+                <label class="container" style="margin-top: 15px">Market cap <span>💲</span> <br> (in millions) </label>
+                <div class="form_control">
+                    <div class="form_control_container">
+                        <div class="form_control_container__time">Min</div>
+                        <input class="form_control_container__time__input" type="text" id="fromInput" value="1 M" min="1" max="7"
+                        readonly>
+                    </div>
+                     <div class="form_control_container">
+                         <div class="form_control_container__time">Max</div>
+                         <input class="form_control_container__time__input" type="text" id="toInput" value="1 T" min="1" max="7"
+                         readonly>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="outer-div double application">
+        <h2 class="tag-title">Applications </h2>
+        <div class="inner-div" style="width: 45%; border: 0px;">
+                <label class="container">Entertainment &#128250;
+                  <input type="checkbox" name="entertainment">
+                  <span class="checkmark application"></span>
+                </label>
+                <label class="container">Music &#127932;
+                  <input type="checkbox" name="music">
+                  <span class="checkmark application"></span>
+                </label>
+                <label class="container">Sports &#9917;
+                  <input type="checkbox" name="sports">
+                  <span class="checkmark application"></span>
+                </label>
+                <label class="container">Education 	&#127891;
+                  <input type="checkbox" name="education">
+                  <span class="checkmark application"></span>
+                </label>
+                <label class="container">Healthcare &#127973;
+                  <input type="checkbox" name="healthcare">
+                  <span class="checkmark application"></span>
+                </label>
+                <label class="container">Insurance &#128195;
+                  <input type="checkbox" name="insurance">
+                  <span class="checkmark application"></span>
+                </label>
+                <label class="container">Real estate &#127969;
+                  <input type="checkbox" name="real_estate">
+                  <span class="checkmark application"></span>
+                </label>
+                <label class="container">Tourism &#128747;
+                  <input type="checkbox" name="tourism">
+                  <span class="checkmark application"></span>
+                </label>
+                <label class="container">Energy sector &#9889;
+                  <input type="checkbox" name="energy">
+                  <span class="checkmark application"></span>
+                </label>
+                <label class="container">Marketing &#128240;
+                  <input type="checkbox" name="marketing">
+                  <span class="checkmark application"></span>
+                </label>
+                <label class="container">Supply chain & logistics &#128230;
+                  <input type="checkbox" name="supply_chain">
+                  <span class="checkmark application"></span>
+                </label>
+                <label class="container">E-commerce &#128722;
+                  <input type="checkbox" name="e-commerce">
+                  <span class="checkmark application"></span>
+                </label>
+                <label class="container">Social media &#128106;
+                  <input type="checkbox" name="social">
+                  <span class="checkmark application"></span>
+                </label>
+                <label class="container">Tokenized gold <span>🪙</span>
+                  <input type="checkbox" name="gold">
+                  <span class="checkmark application"></span>
+                </label>
+                <label class="container">Memecoins &#129313;
+                  <input type="checkbox" name="meme">
+                  <span class="checkmark application"></span>
+                </label>
+                <br>
+            </div>
+        <div class="inner-div" style="width: 45%; border: 0px">
+            <p>Gaming-related</p>
+            <label class="container">Gaming-general &#127918;
+                  <input type="checkbox" name="gaming">
+                  <span class="checkmark application"></span>
+                </label>
+            <label class="container">VR/AR<span>🥽</span>
+                  <input type="checkbox" name="vr_ar">
+                  <span class="checkmark application"></span>
+            </label>
+            <label class="container">Virtual land/world &#127758;
+                  <input type="checkbox" name="virtual_land">
+                  <span class="checkmark application"></span>
+            </label>
+            <label class="container">Play-to-earn &#129297;
+                  <input type="checkbox" name="p2e">
+                  <span class="checkmark application"></span>
+            </label>
+            <label class="container">Gambling &#127920;
+                  <input type="checkbox" name="gambling">
+                  <span class="checkmark application"></span>
+            </label>
+            <br>
+            <p>Data-related</p>
+            <label class="container">Big data &#128190;
+                  <input type="checkbox" name="big_data">
+                  <span class="checkmark application"></span>
+            </label>
+            <label class="container">Artificial intelligence &#129302;
+                  <input type="checkbox" name="ai">
+                  <span class="checkmark application"></span>
+            </label>
+            <label class="container">Data storage <span>☁️</span>
+                  <input type="checkbox" name="data_storage">
+                  <span class="checkmark application"></span>
+            </label>
+            <label class="container">Cybersecurity &#128110;
+                  <input type="checkbox" name="cybersecurity">
+                  <span class="checkmark application"></span>
+            </label>
+            <label class="container">Identity verification &#127380;
+                  <input type="checkbox" name="id">
+                  <span class="checkmark application"></span>
+            </label>
+        </div>
+    </div>
+    <div class="outer-div blockchain">
+        <h2 class="tag-title">Blockchain applications</h2>
+        <div class="inner-div" style="border: 0px;">
+            <label class="container">Smart contracts <span> 🧠</span>
+              <input type="checkbox" name="smart_contracts">
+              <span class="checkmark blockchain"></span>
+            </label>
+            <label class="container">Stablecoin &#128181;
+              <input type="checkbox" name="stablecoin">
+              <span class="checkmark blockchain"></span>
+            </label>
+            <label class="container">NFTs <span>🖼️</span>
+              <input type="checkbox" name="nft">
+              <span class="checkmark blockchain"></span>
+            </label>
+            <label class="container">Web3 &#128376;
+              <input type="checkbox" name="web3">
+              <span class="checkmark blockchain"></span>
+            </label>
+            <label class="container">DAOs <span>🖧</span>
+              <input type="checkbox" name="dao">
+              <span class="checkmark blockchain"></span>
+            </label>
+            <label class="container">Metaverse &#127756;
+              <input type="checkbox" name="metaverse">
+              <span class="checkmark blockchain"></span>
+            </label>
+            <label class="container">Interoperability &#9939;
+              <input type="checkbox" name="interoperability">
+              <span class="checkmark blockchain"></span>
+            </label>
+            <label class="container">Centralized exchange token (CEX) &#128177;
+              <input type="checkbox" name="cex">
+              <span class="checkmark blockchain"></span>
+            </label>
+            <label class="container">Decentralized exchange token (DEX) &#128184;
+              <input type="checkbox" name="dex">
+              <span class="checkmark blockchain"></span>
+            </label>
+        </div>
+    </div>
+    <div class="outer-div advanced">
+        <h2 class="tag-title" style="margin-bottom: 0px">Advanced </h2>
+        <div class="inner-div">
+            <p class="tag-title"> Consensus:</p>
+            <label class="container">POW <span>⛏️</span>
+              <input type="checkbox" name="pow">
+              <span class="checkmark advanced"></span>
+            </label>
+            <label class="container">POS &#127811;
+              <input type="checkbox" name="pos">
+              <span class="checkmark advanced"></span>
+            </label>
+            <label class="container">dPOS &#128499;
+              <input type="checkbox" name="dpos">
+              <span class="checkmark advanced"></span>
+            </label>
+            <label class="container">POW/POS hybrid &#128256;
+              <input type="checkbox" name="hybrid-pow-pos">
+              <span class="checkmark advanced"></span>
+            </label>
+            <label class="container">Other &#10067;
+              <input type="checkbox" name="consensus_other">
+              <span class="checkmark advanced"></span>
+            </label>
+            <br>
+            <p class="tag-title"> Network:</p>
+            <label class="container">Layer 1 &#49;&#65039;&#8419;
+              <input type="checkbox" name="L1">
+              <span class="checkmark advanced"></span>
+            </label>
+            <label class="container">Layer 2 - ADA <img src="static/ada.webp">
+              <input type="checkbox" name="L2_ADA">
+              <span class="checkmark advanced"></span>
+            </label>
+            <label class="container">Layer 2 - ATOM <img src="static/atom.png">
+              <input type="checkbox" name="L2_ATOM">
+              <span class="checkmark advanced"></span>
+            </label>
+            <label class="container">Layer 2 - BNB <img src="static/bnb.png">
+              <input type="checkbox" name="L2_BNB">
+              <span class="checkmark advanced"></span>
+            </label>
+            <label class="container">Layer 2 - ETH <img src="static/eth.png">
+              <input type="checkbox" name="L2_ETH">
+              <span class="checkmark advanced"></span>
+            </label>
+            <label class="container">Layer 2 - LUNA <img src="static/luna.png">
+              <input type="checkbox" name="L2_LUNA">
+              <span class="checkmark advanced"></span>
+            </label>
+            <label class="container">Layer 2 - MATIC <img src="static/matic.png">
+              <input type="checkbox" name="L2_MATIC">
+              <span class="checkmark advanced"></span>
+            </label>
+            <label class="container">Layer 2 - SOL <img src="static/sol.png">
+              <input type="checkbox" name="L2_SOL">
+              <span class="checkmark advanced"></span>
+            </label>
+        </div>
+    </div>
+    <br><br><br><br>
+    <button type="submit">Submit</button>
+</form>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="main-div">
+
+  <form method="post" action="/email.html">
+
+    Enter Name:
+    <input type="text" name="name"><br><br><br>
+
+    Enter Email Address:
+    <input type="text" name="email"><br><br><br>
+
+    Enter Message:<br>
+    <textarea name="message"></textarea><br><br><br>
+
+    <button type="submit">Submit</button>
+
+  </form>
+</div>
+{% endblock %}

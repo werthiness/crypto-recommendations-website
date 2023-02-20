@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='rec_styles.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="main-div">
+<p><output id="fromSlider"></output></p>
+<!--<p>{{ tag_values }}</p>-->
+<div class="rec-div">
+{% for triplet in rec_info | slice(3) %}
+    {% set tripletloop = loop %}
+    {% if loop.index0 == 0 %}
+        {% set top_row = True %}
+    {% else %}
+        {% set top_row = False %}
+    {% endif %}
+    <div class="row-div">
+    {% for coin in triplet %}
+        {% set i= (tripletloop.index0 * 3) + loop.index0 %}
+        {% if top_row %}
+            {% set color = top_recs[loop.index0] %}
+        {% else %}
+            {% set color = "#ffffff" %}
+        {% endif %}
+        <div class="coin-div" style="border-color: {{ color }};  background-color: #ffffff">
+            <div class="rank-div"> {{ recs.index(coin['symbol']) + 1 }} </div>
+            <h2 class="tag-title"> {{ coin['name'] | e }} ({{ coin['symbol'] |e }}) </h2>
+            <div class="perc-match-div">
+                <div class="green" style="width: {{ percs[i] }}%">{{ percs[i]|round }} % match </div>
+            </div>
+            <div class="tag-div", style="border-color: #ffffff">tags:</div>
+            {% for tag in coin['all_tags'] %}
+                {% if tag in tags %}
+                    {% set tag_color = "#a3d8a3" %}
+                {% else %}
+                    {% set tag_color = "#ffffff" %}
+                {% endif %}
+                <div class="tag-div" style="background-color: {{ tag_color }}"> {{ tag|e }}</div>
+            {% endfor %}
+            <ul style="margin-top: 25px; float: left">
+            {% if coin["speed"] %}
+            <li ><b>Speed: </b>{{ coin["speed"] }}</li>
+            {% else %}
+            {% endif %}
+            {% if coin["energy_efficiency"] %}
+            <li style="float: left"><b>Energy-efficiency: </b>{{ coin["energy_efficiency"] }} <i>(Cryptowisser)</i></li>
+            {% else %}
+            {% endif %}
+            </ul>
+            <div class="about-div">
+                <p class="tag-title"> <u>About:</u> </p>
+                <p> {{ coin['sents'] }}..
+                    <a href="https://www.cryptocompare.com/coins/{{  coin['symbol'] }}/overview"
+                       style="text-decoration: none;" target="_blank"> (read more) </a>
+                </p>
+            </div>
+            <div class="read-more-div">
+                {% if coin['white_paper'] %}
+                <p>White paper: <a href="{{ coin['white_paper'] }}">{{ coin['white_paper'] }}</a></p>
+                {% endif %}
+                {% if coin['url'] %}
+                <p>Project URL: <a href="{{ coin['url'] }}">{{ coin['url'] }}</a></p>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+{% endfor %}
+</div>
+</div>
+{% endblock %}

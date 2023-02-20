@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='howitworks.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="main-div">
+  <p> Email sent!</p>
+  <p>{{ inputs }}</p>
+
+</div>
+{% endblock %}

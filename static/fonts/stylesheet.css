@@ -1,0 +1,9 @@
+
+@font-face {
+    font-family: 'avenirregular';
+    src: url('static/fonts/avenir_roman-webfont.woff2') format('woff2'),
+         url('static/fonts/avenir_roman-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

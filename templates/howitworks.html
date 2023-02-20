@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{{ super() }}
+<script src="{{ url_for('static', filename='descriptions.js') }}" defer></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='howitworks.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="main-div">
+    <div class="col-div">
+        <div class="title-div" style="top: 25px"><h3>Data Acquisition</h3></div>
+        <div class="title-div" style="top: 225px"><h3>Data Processing </h3></div>
+        <div class="title-div" style="top: 425px"><h3>Feature engineering</h3></div>
+        <div class="title-div" style="top: 625px"><h3>Feature engineering</h3></div>
+    </div>
+    <div id="kraken" class="link-div" onmouseover="changecontent(kraken_text, site_color)">Kraken</div>
+    <div id="cer" class="link-div" onmouseover="changecontent(cer_text,site_color)">CER</div>
+    <div id="cryptowisser" class="link-div" onmouseover="changecontent(cw_text,site_color)">Cryptowisser</div>
+    <div id="cc" class="link-div" onmouseover="changecontent(cc_text,site_color)">CryptoCompare</div>
+    <div id="cmc" class="link-div" onmouseover="changecontent(cmc_text,site_color)">CoinMarketCap</div>
+
+    <div id="speeds" class="analysis-div" onmouseover="changecontent(speed_desc)">Speed ratings</div>
+    <div id="security" class="analysis-div" onmouseover="changecontent(security_desc)">Security ratings </div>
+    <div id="energy" class="analysis-div" onmouseover="changecontent(energy_desc)">Energy-efficiency ratings </div>
+    <div id="tags" class="analysis-div" onmouseover="changecontent(tag_desc)">Categorical tags </div>
+    <div id="project" class="analysis-div" onmouseover="changecontent(project_desc)">Project info </div>
+
+
+    <svg width="1100" height="1000">
+        <line x1="330" y1="40" x2="330" y2="240" stroke="white"/>
+        <line x1="480" y1="90" x2="480" y2="290" stroke="white"/>
+        <line x1="630" y1="40" x2="630" y2="240" stroke="white"/>
+        <line x1="780" y1="90" x2="780" y2="290" stroke="white"/>
+        <line x1="930" y1="40" x2="930" y2="240" stroke="white"/>
+    </svg>
+
+
+    <div class="description-div">
+        <p> Kraken lists the estimated amount of time to fully confirm a transaction on the blockchain for a number of different
+            cryptocurrencies. These transaction times (the)</p>
+    </div>
+    <div id="test" class="description-div">security stuff</div>
+
+</div>
+
+{% endblock %}

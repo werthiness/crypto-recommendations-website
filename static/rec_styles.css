@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'avenirregular';
+    src: url('avenir_roman-webfont.woff2') format('woff2'),
+         url('avenir_roman-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: url(/static/page_bg.avif);
+    font-family: 'avenirregular', arial;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+.main-div {
+    padding: 30px;
+    width: 86%;
+    margin: auto;
+    height: 100vh;
+    background-color: rgba(255,255,255,0.7);
+    overflow-y:auto;
+    scrollbar-width: thin;
+    scrollbar-color: #333 transparent;
+}
+
+.rec-div {
+    display: inline;
+    position: relative;
+    padding: 20px;
+    text-align: left;
+    vertical-align: top;
+    float: left;
+    width: 100%;
+    margin: auto;
+}
+
+.row-div {
+    margin: auto;
+    display: inline;
+    position: relative;
+    padding: 0 px;
+    text-align: left;
+    float: left;
+    vertical-align: top;
+    width: 100%;
+}
+
+.coin-div {
+    display: inline;
+    border: 5px solid;
+    border-radius: 10px;
+    position: relative;
+    padding: 0 px;
+    text-align: left;
+    float: left;
+    vertical-align: top;
+    width: 25%;
+    margin: 15px 20px 20px 50px;
+    font-color: #000000;
+}
+
+.rank-div {
+    display: inline;
+    position: relative;
+    text-align: center;
+    font-size: 22px;
+    float: left;
+    vertical-align: top;
+    margin: 0px;
+}
+
+.rec-title {
+  text-align: center
+}
+
+.tag-div {
+    display: inline;
+    position: relative;
+    text-align: center;
+    float: left;
+    vertical-align: top;
+    margin: 5px;
+    border: 1px solid;
+    padding: 2px;
+    background: #ffffff;
+}
+
+.section-div{
+    display: inline;
+    position: relative;
+    padding: 0 px;
+    text-align: left;
+    float: left;
+    vertical-align: top;
+    width: 90%;
+    margin: 25px;
+}
+
+.about-div{
+    display: inline;
+    position: relative;
+    padding: 10px;
+    text-align: left;
+    float: left;
+    vertical-align: top;
+    width: 80%;
+    margin: 30px;
+    margin-bottom: 0px;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    background-color: #dff3ff;
+}
+
+.read-more-div{
+    display: inline;
+    position: relative;
+    padding: 10px;
+    text-align: left;
+    float: left;
+    vertical-align: top;
+    width: 80%;
+    margin: 25px;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    background-color: #dff3ff;
+}
+
+.perc-match-div{
+    display: inline;
+    position: relative;
+    float: left;
+    text-align: center;
+    vertical-align: top;
+    width: 80%;
+    margin: 10%;
+    border: 2px solid;
+    background-color: #d8a3a3;
+}
+
+.green{
+    background-color: #a3d8a3;
+}

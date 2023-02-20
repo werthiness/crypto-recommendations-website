@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='data_styles.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="main-div">
+    <div class="row-div">
+        <div class="col-div" style="width: 950px; left:0px">
+            <img src="static/eth_growth_v1.png", width="900px", height="700px">
+        </div>
+        <div class="col-div" style="width: 40%; left:980px">
+            <h2> What does the growth of a blockchain network look like? </h2>
+            <p>
+                <u>Background:</u> <br>
+                Ethereum launched on July 30th, 2015. The motivation was to create a network that expanded beyond the
+                functionality provided by Bitcoin (i.e., money), and would allow for diverse applications of its native token.
+                As the network has grown, this motivation has largely come to fruition; however, different applications have
+                been integrated into the ecosystem at different timescales. Here's a look at the growth of each since Ethereum
+                first went online.
+            </p>
+            <p>
+                <u>Description:</u> <br>
+                This scatterplot-heatmap hybrid shows the # of projects
+                related to each application on the Ethereum network at different timepoints in its history (quarterly, each year).
+                Applications are grouped into four general categories (general/industry, gaming-related, data-related, and
+                blockchain-related), and sorted most-to-least based on  the last timepoint. White lines are provided
+                for visual guidance between each y-axis labels and their corresponding first project.
+            </p>
+            <p>
+                <u>Observations & interpretation:</u>
+                <ul>
+                    <li>
+                        <b>Blockchain-related tags dominate</b> - On first inspection of the graph, our eyes are drawn to the area
+                        with the most heat - the large number of projects with blockchain-related tags in recent years. It makes sense that
+                        blockchain-related tags would be most common; every project in this dataset is a <i>blockchain</i>
+                        -project, after all. A project dealing with sports NFTs and a project dealing with music NFTs would each be respectively
+                        tagged with "sports" or "music", but both would be tagged with "NFTs".
+                    </li><br>
+                    <li>
+                        <b>Unique timescales of growth</b> - Some categories seem to have their own, idiosyncratic timescales of growth.
+                        For example, tokenized gold was the first in the "general" group to
+                        have a project, but this category then stagnated - putting it near the bottom of this group in terms
+                        of 2023 project numbers (second only to education). Memecoins, on the other hand, were the last category
+                        to have a project but the mysterious power of memes has helped it surge to the top of this group
+                        (second only to entertainment).
+                    </li><br>
+                    <li>
+                        <b>Periods of shared growth</b> - Crypto's historic rallies (2017 and 2021) have left a mark on this graph.
+                        Many of the categories shown here had their first project on the network around the same time in the beginning of 2017,
+                        followed by relatively little growth during crypto winter in 2018-2019. Similarly, we can a handful of
+                        applications, such as NFTs and gaming, explode in 2021.
+                    </li>
+            </ul>
+            </p>
+            <p>
+                <u>Limitations:</u> <br>
+                The way this data has been gathered and analyzed has general limitations that apply here as they do elsewhere.
+                For example, the dataset is limited to projects which had a listed market cap that exceeded
+                1 million dollars (and this particular analysis deliberately limits that further to the subset on the Ethereum
+                platform for a total of around 1,000). There are, of course, important projects that do not meet these criteria.
+                And the project sizes reported here are based on the application of categorical tags to each project.
+                This is not an error-proof process, so project numbers may under- or over- estimate ground truth.
+            </p>
+            <p>
+                Additionally, there are also some specific considerations to be made for this growth analysis that are
+                somewhat subtle, but the reader should be aware of. Although the intent here was to look at the
+                growth of different applications over Ethereum's history, the data presented here was gathered from
+                current listings, which provide less-than-complete picture of this history. Consider projects that have
+                failed, become inactive, or were otherwise removed from listings... ideally, these would still be
+                included - at least for the years they were active - but unfortunately are not. In a similar vein,
+                currently available descriptions are the basis for categorical applications/tags of each project, and
+                there is an implicit assumption that these are stationary over time. In any case where a project
+                expanded/narrowed/changed its applications, such non-stationarities may not be adequately shown here.
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
