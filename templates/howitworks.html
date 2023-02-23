@@ -11,37 +11,47 @@
 <div class="main-div">
     <div class="col-div">
         <div class="title-div" style="top: 25px"><h3>Data Acquisition</h3></div>
-        <div class="title-div" style="top: 225px"><h3>Data Processing </h3></div>
-        <div class="title-div" style="top: 425px"><h3>Feature engineering</h3></div>
-        <div class="title-div" style="top: 625px"><h3>Feature engineering</h3></div>
+        <div class="title-div" style="top: 225px; color: #f6dd6e"><h3>Data Processing & Analysis</h3></div>
+        <div class="title-div" style="top: 425px; color: #85cc65"><h3>Feature Matrix Construction</h3></div>
+        <div class="title-div" style="top: 625px; color: #4c90ad"><h3>Recommendation Engine</h3></div>
     </div>
+    <div id="cc" class="link-div" onmouseover="changecontent(cc_text,site_color)">CryptoCompare</div>
+    <div id="cmc" class="link-div" onmouseover="changecontent(cmc_text,site_color)">CoinMarketCap</div>
     <div id="kraken" class="link-div" onmouseover="changecontent(kraken_text, site_color)">Kraken</div>
     <div id="cer" class="link-div" onmouseover="changecontent(cer_text,site_color)">CER</div>
     <div id="cryptowisser" class="link-div" onmouseover="changecontent(cw_text,site_color)">Cryptowisser</div>
-    <div id="cc" class="link-div" onmouseover="changecontent(cc_text,site_color)">CryptoCompare</div>
-    <div id="cmc" class="link-div" onmouseover="changecontent(cmc_text,site_color)">CoinMarketCap</div>
 
-    <div id="speeds" class="analysis-div" onmouseover="changecontent(speed_desc)">Speed ratings</div>
+    <div id="tags" class="analysis-div" onmouseover="changecontent(tag_desc)">Categorical tags </div>
+    <div id="project" class="analysis-div" onmouseover="changecontent(project_desc)">Blockchain  & <br> categorical tags</div>
+    <div id="speed" class="analysis-div" onmouseover="changecontent(speed_desc)">Speed ratings</div>
     <div id="security" class="analysis-div" onmouseover="changecontent(security_desc)">Security ratings </div>
     <div id="energy" class="analysis-div" onmouseover="changecontent(energy_desc)">Energy-efficiency ratings </div>
-    <div id="tags" class="analysis-div" onmouseover="changecontent(tag_desc)">Categorical tags </div>
-    <div id="project" class="analysis-div" onmouseover="changecontent(project_desc)">Project info </div>
 
+    <div id="matrix" onmouseover="changecontent(matrix_desc)">Feature Matrix </div>
+
+    <div id="nn" class="rec-div" onmouseover="changecontent(nn_desc)"> Nearest neighbors </div>
+    <div id="in" class="rec-div"> User inputs </div>
+    <div id="out" class="rec-div" onmouseover="changecontent(out_desc)">Recommendations </div>
 
     <svg width="1100" height="1000">
-        <line x1="330" y1="40" x2="330" y2="240" stroke="white"/>
-        <line x1="480" y1="90" x2="480" y2="290" stroke="white"/>
-        <line x1="630" y1="40" x2="630" y2="240" stroke="white"/>
-        <line x1="780" y1="90" x2="780" y2="290" stroke="white"/>
-        <line x1="930" y1="40" x2="930" y2="240" stroke="white"/>
+        <line x1="430" y1="40" x2="430" y2="240" stroke="white"/>
+        <line x1="580" y1="90" x2="580" y2="290" stroke="white"/>
+        <line x1="730" y1="40" x2="730" y2="240" stroke="white"/>
+        <line x1="880" y1="90" x2="880" y2="290" stroke="white"/>
+        <line x1="1030" y1="40" x2="1030" y2="240" stroke="white"/>
+
+        <line x1="430" y1="240" x2="730" y2="490" stroke="#f6dd6e"/>
+        <line x1="580" y1="290" x2="730" y2="490" stroke="#f6dd6e"/>
+        <line x1="730" y1="240" x2="730" y2="490" stroke="#f6dd6e"/>
+        <line x1="880" y1="290" x2="730" y2="490" stroke="#f6dd6e"/>
+        <line x1="1030" y1="240" x2="730" y2="490" stroke="#f6dd6e"/>
+
+        <line x1="730" y1="490" x2="730" y2="690" stroke="#85cc65"/>
+        <line x1="430" y1="690" x2="730" y2="690" stroke="#4c90ad"/>
+        <line x1="730" y1="690" x2="1030" y2="690" stroke="#4c90ad"/>
     </svg>
 
-
-    <div class="description-div">
-        <p> Kraken lists the estimated amount of time to fully confirm a transaction on the blockchain for a number of different
-            cryptocurrencies. These transaction times (the)</p>
-    </div>
-    <div id="test" class="description-div">security stuff</div>
+    <div id="test" class="description-div"><i>Hover over any step in the box diagram for more info</i></div>
 
 </div>
 

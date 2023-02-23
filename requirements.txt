@@ -1,5 +1,4 @@
 Flask
-flask_mail
 pandas
 scikit-learn
 Gunicorn

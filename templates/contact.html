@@ -3,25 +3,27 @@
 {% block head %}
 {{ super() }}
 <link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}">
+<script src="https://kit.fontawesome.com/6e79c93ae2.js" crossorigin="anonymous"></script>
 {% endblock %}
 
 {% block content %}
 
 <div class="main-div">
-
-  <form method="post" action="/email.html">
-
-    Enter Name:
-    <input type="text" name="name"><br><br><br>
-
-    Enter Email Address:
-    <input type="text" name="email"><br><br><br>
-
-    Enter Message:<br>
-    <textarea name="message"></textarea><br><br><br>
-
-    <button type="submit">Submit</button>
-
-  </form>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScEfKvxmI8THXfBhg-L2oUwgAMEa4YB2leJQ0mWTOr4NEjmvw/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">
+        Loading…
+    </iframe>
+    <hr style="width:50%;text-align:left;margin-left:0">
+    Developed by Jesse Werth for The Data Incubator (TDI) Capstone Project <br><br>
+    <a href="mailto:jessecwe@gmail.com">
+        <i class="fa-solid fa-envelope fa-xl"></i>&nbsp;&nbsp;jessecwe@gmail.com
+    </a>
+    <br><br>
+    <a href="https://www.github.com/werthiness">
+        <i class="fa-brands fa-github fa-xl"></i>&nbsp;&nbsp;Github
+    </a> <br><br>
+    <a href="https://www.linkedin.com/in/jesse-werth-67b43188">
+        <i class="fa-brands fa-linkedin fa-xl"></i>&nbsp;&nbsp;LinkedIn
+    </a>
 </div>
+
 {% endblock %}

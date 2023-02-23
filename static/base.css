@@ -43,6 +43,13 @@ h2 {
   color: white;
 }
 
+.alert {
+    padding: 20px;
+    margin: 5px;
+    color: #970020;
+    background-color: #ffd5de;
+}
+
 .main-div {
     padding: 30px;
     width: 86%;
@@ -105,7 +112,8 @@ h2 {
 
 .tag-title {
   text-align: center;
-  padding: 0px;}
+  padding: 0px;
+}
 
 .container {
   display: block;

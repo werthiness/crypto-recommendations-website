@@ -5,20 +5,21 @@
 <meta charset="UTF-8">
 <title>Cryptocurrency recommendation engine</title>
     <!-- HTML !-->
-    <link rel="stylesheet" href="{{ url_for('static', filename='form_styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
         {% block head %}
         {% endblock %}
 </head>
 
 <body>
     <div class="nav">
-        <a href="{{ url_for('index') }}">Find a  cryptocurrency</a>
+        <a href="{{ url_for('index') }}">Home</a>
         <a href="{{ url_for('howitworks') }}">How it works</a>
         <a href="{{ url_for('data') }}">Data insights</a>
         <a href="{{ url_for('contact') }}">Contact me</a>
     </div>
-
-
+    {% for message in get_flashed_messages() %}
+        <div class="alert">{{ message }}</div>
+    {% endfor %}
         {% block content %} {% endblock %}
 </body>
 </html>

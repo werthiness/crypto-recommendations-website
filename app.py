@@ -1,5 +1,4 @@
-from flask import Flask, render_template, request, url_for, flash, redirect
-from flask_mail import Mail, Message
+from flask import Flask, render_template, request, flash
 import os
 import json
 import pandas as pd
@@ -7,16 +6,8 @@ from sklearn.neighbors import NearestNeighbors
 import copy
 
 app = Flask(__name__)
-app.config.update(dict(
-    DEBUG=True,
-    # email server
-    MAIL_SERVER='smtp.googlemail.com',
-    MAIL_PORT = 465,
-    MAIL_USE_TLS = False,
-    MAIL_USE_SSL = True,
-    MAIL_USERNAME = 'my_username',
-    MAIL_PASSWORD = 'my_password',
-))
+
+app.config['SECRET_KEY'] = os.urandom(24).hex()
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -37,24 +28,11 @@ def howitworks():
 def contact():
     return render_template('contact.html')
 
-@app.route("/email.html", methods=['POST'])
-def mail():
-    mail = Mail(app)
-    inputs = request.form
-    sender = inputs['name']
-    sender_email = inputs['email']
-    message = inputs['message']
-    msg = Message(message,
-                  sender=(sender, sender_email),
-                  recipients=["jessecwe@gmail.com"])
-    mail.send(msg)
-    return render_template('email.html', inputs=sender)
 
-
-def find_recommendations(tags, master_json='flask-crypto-recommendations\\coin_data\\feature_matrix.json',
-                         drop_rest=True, k=5):
+def find_recommendations(tags, master_json='coin_data/feature_matrix.json',
+                         drop_rest=True, k=9):
     tags = {k: v for k, v in tags.items() if k not in ['min', 'max']}
-    with open(f"{os.getcwd()}\\{master_json}", "r") as f:
+    with open(f"{os.getcwd()}/{master_json}", "r") as f:
         cmc_data = json.load(f)
     feature_matrix = pd.DataFrame(index=cmc_data['index'], columns=cmc_data['columns'], data=cmc_data['data'])
     ranks = feature_matrix['rank']  # hold for later, but drop from feature matrix
@@ -66,7 +44,7 @@ def find_recommendations(tags, master_json='flask-crypto-recommendations\\coin_d
     if drop_rest:
         feature_matrix = feature_matrix.filter(items=tags)
 
-    user_point = pd.DataFrame(0, index=[0], columns=feature_matrix.columns)  # initialize with all 0s
+    user_point = pd.DataFrame(0, index=[0], columns=feature_matrix.columns)
     for tag in tags:  # add 1s to what they're looking for
         user_point[tag] = 1
 
@@ -99,9 +77,9 @@ def find_recommendations(tags, master_json='flask-crypto-recommendations\\coin_d
 
 
 def read_recommendation_json(final_recs, tags,
-                             rec_json='flask-crypto-recommendations\\coin_data\\recommendation_info.json'):
+                             rec_json='coin_data/recommendation_info.json'):
 
-    with open(f"{os.getcwd()}\\{rec_json}", "r") as f:
+    with open(f"{os.getcwd()}/{rec_json}", "r") as f:
         rec_dict = json.load(f)
     init_sent_dict = {tag: None for tag in tags}
     init_coin_dict = {key: (copy.deepcopy(init_sent_dict) if key == "sents" else None) for key in
@@ -155,32 +133,12 @@ def read_recommendation_json(final_recs, tags,
 def rec():
     if request.method == 'POST':
         tags = request.form
-        recs, percs, tag_values = find_recommendations(tags, k=9)
-        rec_dict = read_recommendation_json(recs, tags)
-        top_recs = {0: "#FFC300", 1: "#b9ccd4", 2: "#cb8d3f"}
-        # title = request.form['title']
-        # content = request.form['content']
-        # for x in request.form.items():
-        # ent = request.form['ent']
-        # if not title:
-        #     flash('Title is required!')
-        # elif not content:
-        #     flash('Content is required!')
-        # else:
-        #     messages.append({'title': title, 'content': content})
-        #     return redirect(url_for('index'))
-        return render_template('recommendations.html', recs=recs, percs=percs, tags=tags, rec_info=rec_dict.values(),
-                               top_recs=top_recs)
-
-
-# @app.route('/')
-# def index():
-#     return 'Index Page'
-
-# @app.route('/webpage1/', methods=('GET', 'POST'))
-# def create():
-#     return render_template('webpage1.html')
-
-# @app.route('/static/form_styles')
-# def create():
-#     return render_template('form_styles.css')
+        if len(tags) >= 1:
+            recs, percs, tag_values = find_recommendations(tags)
+            rec_dict = read_recommendation_json(recs, tags)
+            top_recs = {0: "#FFC300", 1: "#b9ccd4", 2: "#cb8d3f"}
+            return render_template('recommendations.html', recs=recs, percs=percs, tags=tags, rec_info=rec_dict.values(),
+                                   top_recs=top_recs)
+        else:
+            flash("Please select at least one item on the form!")
+            return render_template('home.html')

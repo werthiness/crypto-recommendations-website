@@ -20,7 +20,7 @@ h2 {
     width: 86%;
     margin: auto;
     height: 100vh;
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(0,0,0,0.8);
     overflow-y:auto;
     scrollbar-width: thin;
     scrollbar-color: #333 transparent;
