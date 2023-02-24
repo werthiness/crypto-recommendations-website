@@ -1,15 +1,7 @@
-@font-face {
-    font-family: 'avenirregular';
-    src: url('avenir_roman-webfont.woff2') format('woff2'),
-         url('avenir_roman-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 body {
     background: url(/static/page_bg.avif);
     font-family: 'avenirregular', arial;
-    color: #ffffff;
+    color: white;
 }
 
 h2 {
@@ -22,6 +14,14 @@ p {
     color: #ffffff;
     font-size: 17px;
     text-align: left;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 ul {
@@ -48,8 +48,8 @@ mark {
     height: 100vh;
     background-color: rgba(0,0,0,0.8);
     overflow-y:auto;
-    scrollbar-width: thin;
-    scrollbar-color: #333 transparent;
+    scrollbar-width: auto;
+    scrollbar-color: #fff transparent;
 }
 
 .col-div {

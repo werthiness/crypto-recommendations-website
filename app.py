@@ -119,9 +119,8 @@ def read_recommendation_json(final_recs, tags,
                     highlight[coin]["energy_efficiency"] = f"{coin} has a rating of {energy_efficiency}, " \
                                                                     f"which means {rating_dict[energy_efficiency]}."
         if "security" in tags:
-            security = info["security"]
             if "security" in info.keys():
-                highlight[coin]["security"] = f"{coin} has a security rating of {security}."
+                highlight[coin]["security"] = f"{coin} has a security rating of {info['security']}."
 
         if "deflationary" in tags:
             highlight[coin]["supply"] = f"{coin} has a total supply of {info['supply']}."

@@ -6,8 +6,6 @@
 
 {% block content %}
 <div class="main-div">
-<p><output id="fromSlider"></output></p>
-<!--<p>{{ tag_values }}</p>-->
 <div class="rec-div">
 {% for triplet in rec_info | slice(3) %}
     {% set tripletloop = loop %}
@@ -30,7 +28,7 @@
             <div class="perc-match-div">
                 <div class="green" style="width: {{ percs[i] }}%">{{ percs[i]|round }} % match </div>
             </div>
-            <div class="tag-div", style="border-color: #ffffff">tags:</div>
+            <div class="tag-div", style="border-color: #ffffff"><i class="fa-solid fa-tags" style="margin-left: 20px"></i></div>
             {% for tag in coin['all_tags'] %}
                 {% if tag in tags %}
                     {% set tag_color = "#a3d8a3" %}
@@ -41,11 +39,15 @@
             {% endfor %}
             <ul style="margin-top: 25px; float: left">
             {% if coin["speed"] %}
-            <li ><b>Speed: </b>{{ coin["speed"] }}</li>
+                <li ><b>Speed: </b>{{ coin["speed"] }}<i>(Kraken)</i></li>
             {% else %}
             {% endif %}
             {% if coin["energy_efficiency"] %}
-            <li style="float: left"><b>Energy-efficiency: </b>{{ coin["energy_efficiency"] }} <i>(Cryptowisser)</i></li>
+                <li style="float: left"><b>Energy-efficiency: </b>{{ coin["energy_efficiency"] }} <i>(Cryptowisser)</i></li>
+            {% else %}
+            {% endif %}
+            {% if coin["security"] %}
+                <li style="float: left"><b>Security: </b>{{ coin["security"] }} <i>(CER)</i></li>
             {% else %}
             {% endif %}
             </ul>

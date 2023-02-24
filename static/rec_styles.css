@@ -1,29 +1,11 @@
-@font-face {
-    font-family: 'avenirregular';
-    src: url('avenir_roman-webfont.woff2') format('woff2'),
-         url('avenir_roman-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+a {
+    color: black;
+    text-decoration: none;
 }
 
-body {
-    background: url(/static/page_bg.avif);
-    font-family: 'avenirregular', arial;
-}
-
-h2 {
-    font-size: 26px;
-}
-
-.main-div {
-    padding: 30px;
-    width: 86%;
-    margin: auto;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.8);
-    overflow-y:auto;
-    scrollbar-width: thin;
-    scrollbar-color: #333 transparent;
+a:hover {
+    color: blue;
+    text-decoration: none;
 }
 
 .rec-div {
