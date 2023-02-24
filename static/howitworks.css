@@ -54,11 +54,11 @@ mark {
 
 .col-div {
     position:absolute;
-    top: 30px;
-    left: 30px;
-    padding: 20px 0px 0px 0px;
+    top: 10px;
+    left: 0px;
+    padding: 0px;
     text-align: left;
-    width: 200px;
+    width: 150px;
     height: 800px;
     margin: 10px;
 }
@@ -110,10 +110,10 @@ mark {
 }
 
 .description-div {
-    width: 550px;
+    width: 500px;
     position:absolute;
     top: 0px;
-    left: 1200px;
+    left: 1050px;
     text-align: center;
     margin: 50px;
     border: 1px solid #ffffff;
@@ -125,68 +125,68 @@ mark {
 
 #cc {
     top: 0px;
-    left:300px;
+    left:200px;
     position:absolute
 }
 
 #cmc {
     top: 50px;
-    left: 450px;
+    left: 350px;
     position:absolute
 }
 
 #kraken {
     top: 0px;
-    left: 600px;
+    left: 500px;
     position:absolute
 }
 
 #cer {
     top: 50px;
-    left: 750px;
+    left: 650px;
     position:absolute
 }
 
 #cryptowisser {
     top: 0px;
-    left: 900px;
+    left: 800px;
     position:absolute
 }
 
 
 #tags {
     top: 200px;
-    left: 300px;
+    left: 200px;
     position:absolute
 }
 
 #project {
     height: 40px;
     top: 250px;
-    left: 450px;
+    left: 350px;
     position:absolute
 }
 
 #speed {
     top: 200px;
-    left: 600px;
+    left: 500px;
     position:absolute
 }
 
 #security {
     top: 250px;
-    left: 750px;
+    left: 650px;
     position:absolute
 }
 
 #energy {
     top: 200px;
-    left: 900px;
+    left: 800px;
     position:absolute
 }
 
 #matrix {
-    left: 600px;
+    left: 500px;
     top: 450px;
     position:absolute;
     height: 25px;
@@ -201,19 +201,19 @@ mark {
 }
 
 #nn {
-    left: 600px;
+    left: 500px;
     top: 650px;
     position:absolute;
 }
 
 #in {
-    left: 300px;
+    left: 200px;
     top: 650px;
     position:absolute;
 }
 
 #out {
-    left: 900px;
+    left: 800px;
     top: 650px;
     position:absolute;
 }
