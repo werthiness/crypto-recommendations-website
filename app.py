@@ -48,7 +48,7 @@ def find_recommendations(tags, master_json='coin_data/feature_matrix.json',
     for tag in tags:  # add 1s to what they're looking for
         user_point[tag] = 1
 
-    find_n = {1: 800, 2: 600, 3: 400}
+    find_n = {1: 1000, 2: 600, 3: 400}
     if len(tags) in find_n.keys():
         n_neighbors = find_n[len(tags)]
     else:
@@ -71,7 +71,7 @@ def find_recommendations(tags, master_json='coin_data/feature_matrix.json',
     final_recs = rec_df.index.values[:k].tolist()
 
     norm_distances = rec_df.distance.values.tolist()[:k]
-    perc_match = [(1 - distance ) * 100 for distance in norm_distances]
+    perc_match = [(1 - distance) * 100 for distance in norm_distances]
     tag_values = {rec: feature_matrix.loc[rec, :].values.tolist() for rec in final_recs}
     return final_recs, perc_match, tag_values
 
