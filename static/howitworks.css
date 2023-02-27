@@ -1,7 +1,10 @@
 body {
-    background: url(/static/page_bg.avif);
+    background-image: url("/static/page_bg.avif");
+    background-color: #326da8;
     font-family: 'avenirregular', arial;
-    color: white;
+    overflow-y:auto;
+    scrollbar-width: auto;
+    scrollbar-color: #fff transparent;
 }
 
 h2 {
