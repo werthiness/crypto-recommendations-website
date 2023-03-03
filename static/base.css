@@ -19,6 +19,11 @@ h2 {
     font-size: 26px;
 }
 
+.intro {
+    margin: 30px;
+    color: white;
+}
+
 a {
     color: white;
     text-decoration: none;
@@ -102,9 +107,13 @@ a:hover {
     width: 85%;
     background-color: #ffffff;
     border: 0px solid;
+    overflow: auto;
+    scrollbar-width: auto;
+    scrollbar-color: #333 transparent;
 }
 
 .inner-div p {
+    color: black;
     font-size: 20px;
     text-decoration-line: underline;
     text-align: center;

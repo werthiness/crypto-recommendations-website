@@ -3,9 +3,11 @@
 {% block content %}
 <div class="main-div">
 <form method="post" action="/recommendations.html">
+    <p class="intro">Navigating the world of cryptocurrencies is difficult! Coinrex is a recommendation engine that aims to make it a little easier.
+        Tell us what types of projects you're looking, and we'll return a list of tokens that (hopefully) matches your interests! </p>
     <div class="outer-div">
-        <h2 class="tag-title">Properties </h2>
         <div class="inner-div" style="border: 0px;">
+        <h2 class="tag-title">Properties </h2>
             <label class="container">Security &#128274;
               <input type="checkbox" name="security">
               <span class="checkmark property"></span>
@@ -36,68 +38,68 @@
     <div class="outer-div double application">
         <h2 class="tag-title">Applications </h2>
         <div class="inner-div" style="width: 45%; border: 0px;">
-                <label class="container">Entertainment &#128250;
-                  <input type="checkbox" name="entertainment">
-                  <span class="checkmark application"></span>
-                </label>
-                <label class="container">Music &#127932;
-                  <input type="checkbox" name="music">
-                  <span class="checkmark application"></span>
-                </label>
-                <label class="container">Sports &#9917;
-                  <input type="checkbox" name="sports">
-                  <span class="checkmark application"></span>
-                </label>
-                <label class="container">Education 	&#127891;
-                  <input type="checkbox" name="education">
-                  <span class="checkmark application"></span>
-                </label>
-                <label class="container">Healthcare &#127973;
-                  <input type="checkbox" name="healthcare">
-                  <span class="checkmark application"></span>
-                </label>
-                <label class="container">Insurance &#128195;
-                  <input type="checkbox" name="insurance">
-                  <span class="checkmark application"></span>
-                </label>
-                <label class="container">Real estate &#127969;
-                  <input type="checkbox" name="real_estate">
-                  <span class="checkmark application"></span>
-                </label>
-                <label class="container">Tourism &#128747;
-                  <input type="checkbox" name="tourism">
-                  <span class="checkmark application"></span>
-                </label>
-                <label class="container">Energy sector &#9889;
-                  <input type="checkbox" name="energy">
-                  <span class="checkmark application"></span>
-                </label>
-                <label class="container">Marketing &#128240;
-                  <input type="checkbox" name="marketing">
-                  <span class="checkmark application"></span>
-                </label>
-                <label class="container">Supply chain & logistics &#128230;
-                  <input type="checkbox" name="supply_chain">
-                  <span class="checkmark application"></span>
-                </label>
-                <label class="container">E-commerce &#128722;
-                  <input type="checkbox" name="e-commerce">
-                  <span class="checkmark application"></span>
-                </label>
-                <label class="container">Social media &#128106;
-                  <input type="checkbox" name="social">
-                  <span class="checkmark application"></span>
-                </label>
-                <label class="container">Tokenized gold <span>🪙</span>
-                  <input type="checkbox" name="gold">
-                  <span class="checkmark application"></span>
-                </label>
-                <label class="container">Memecoins &#129313;
-                  <input type="checkbox" name="meme">
-                  <span class="checkmark application"></span>
-                </label>
-                <br>
-            </div>
+            <label class="container">Entertainment &#128250;
+              <input type="checkbox" name="entertainment">
+              <span class="checkmark application"></span>
+            </label>
+            <label class="container">Music &#127932;
+              <input type="checkbox" name="music">
+              <span class="checkmark application"></span>
+            </label>
+            <label class="container">Sports &#9917;
+              <input type="checkbox" name="sports">
+              <span class="checkmark application"></span>
+            </label>
+            <label class="container">Education 	&#127891;
+              <input type="checkbox" name="education">
+              <span class="checkmark application"></span>
+            </label>
+            <label class="container">Healthcare &#127973;
+              <input type="checkbox" name="healthcare">
+              <span class="checkmark application"></span>
+            </label>
+            <label class="container">Insurance &#128195;
+              <input type="checkbox" name="insurance">
+              <span class="checkmark application"></span>
+            </label>
+            <label class="container">Real estate &#127969;
+              <input type="checkbox" name="real_estate">
+              <span class="checkmark application"></span>
+            </label>
+            <label class="container">Tourism &#128747;
+              <input type="checkbox" name="tourism">
+              <span class="checkmark application"></span>
+            </label>
+            <label class="container">Energy sector &#9889;
+              <input type="checkbox" name="energy">
+              <span class="checkmark application"></span>
+            </label>
+            <label class="container">Marketing &#128240;
+              <input type="checkbox" name="marketing">
+              <span class="checkmark application"></span>
+            </label>
+            <label class="container">Supply chain & logistics &#128230;
+              <input type="checkbox" name="supply_chain">
+              <span class="checkmark application"></span>
+            </label>
+            <label class="container">E-commerce &#128722;
+              <input type="checkbox" name="e-commerce">
+              <span class="checkmark application"></span>
+            </label>
+            <label class="container">Social media &#128106;
+              <input type="checkbox" name="social">
+              <span class="checkmark application"></span>
+            </label>
+            <label class="container">Tokenized gold <span>🪙</span>
+              <input type="checkbox" name="gold">
+              <span class="checkmark application"></span>
+            </label>
+            <label class="container">Memecoins &#129313;
+              <input type="checkbox" name="meme">
+              <span class="checkmark application"></span>
+            </label>
+            <br>
+        </div>
         <div class="inner-div" style="width: 45%; border: 0px">
             <p>Gaming-related:</p>
             <label class="container">Gaming-general &#127918;
@@ -145,8 +147,8 @@
         </div>
     </div>
     <div class="outer-div blockchain">
-        <h2 class="tag-title">Blockchain applications</h2>
         <div class="inner-div" style="border: 0px;">
+            <h2 class="tag-title">Blockchain applications</h2>
             <label class="container">Smart contracts <span> 🧠</span>
               <input type="checkbox" name="smart_contracts">
               <span class="checkmark blockchain"></span>
@@ -186,8 +188,8 @@
         </div>
     </div>
     <div class="outer-div advanced">
-        <h2 class="tag-title" style="margin-bottom: 0px">Advanced </h2>
         <div class="inner-div">
+            <h2 class="tag-title" style="margin-bottom: 0px">Advanced </h2>
             <p class="tag-title"> Consensus:</p>
             <label class="container">POW <span>⛏️</span>
               <input type="checkbox" name="pow">
